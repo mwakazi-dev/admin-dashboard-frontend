@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Admin Dashboard Project
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is a **Next.js** dashboard application using the **App Router** architecture. It features role-based access control, displaying appropriate content for **admins** and **regular users**. It is styled with **Ant Design** and **Styled Components**. The project follows best practices with **ESLint** and **Husky** and includes comprehensive testing using **Jest**, **Testing Library**, and **Cypress**. **TanStack React Query** is used for efficient data fetching and state management.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- **Role-Based Authentication** (Admin/User) with dynamic content display.
+- **Authentication System** including:
+  - Registration & Login
+  - Password Reset & Change Password
+  - Role Management
+- **Next.js App Router** for optimized performance and routing.
+- **Ant Design** for a sleek and professional UI.
+- **Styled Components** for modular and dynamic styling.
+- **TanStack React Query** for efficient data fetching and caching.
+- **Jest & Testing Library** for unit and component testing.
+- **Cypress** for end-to-end testing.
+- **ESLint** for maintaining clean and consistent code.
+- **Husky** for enforcing pre-commit hooks and automated checks.
+
+## Installation
+
+Ensure you have **Node.js** (LTS recommended) installed.
+
+```sh
+# Clone the repository
+git clone <repo-url>
+cd <project-folder>
+
+# Install dependencies
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the Development Server
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application will be available at `http://localhost:3000`.
 
-## Learn More
+## Linting & Code Formatting
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+npm run lint  # Run ESLint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Testing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Running Unit and Component Tests (Jest & Testing Library)
 
-## Deploy on Vercel
+```sh
+npm test
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Running End-to-End Tests (Cypress)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sh
+npm run cypress open
+```
+
+## Husky Pre-commit Hooks
+
+Husky is configured to run pre-commit hooks for linting and tests.
+To manually run:
+
+```sh
+npm run prepare  # Set up Husky hooks
+```
+
+## Folder Structure
+
+```
+📂 app/
+ ├── 📂 components/  # Reusable UI components
+ ├── 📂 lib/         # Shared libraries and utilities
+ ├── 📂 services/    # API and data fetching services
+ ├── 📂 context/    #  Context providers
+ ├── 📂 __tests__/   # Unit and integration tests
+ ├── 📂 styles/      # Styled Components & global styles
+📂 cypress/         # Cypress end-to-end tests
+```
+
+## Purpose
+
+This project is designed as a portfolio piece to demonstrate skills in **Next.js**, **authentication & role-based access control**, **UI design**, and **automated testing**. It is intended for potential recruiters to showcase expertise in frontend development and best practices.
+
+## Contributing
+
+Feel free to contribute by opening an issue or submitting a pull request.
+
+## License
+
+This project is licensed under the **MIT License**.
