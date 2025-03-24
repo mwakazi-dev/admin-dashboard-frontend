@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Button from "@/components/Button";
 
 describe("Button Component", () => {
@@ -10,9 +10,26 @@ describe("Button Component", () => {
 
   it("handles click event", () => {
     const onClick = jest.fn();
-    const { getByText } = render(<Button onClick={onClick}>Click Me</Button>);
-    getByText("Click Me").click();
+    render(<Button onClick={onClick}>Click Me</Button>);
+
+    const button = screen.getByText("Click Me");
+    fireEvent.click(button);
+
     expect(onClick).toHaveBeenCalledTimes(1);
+  });
+
+  it("does not trigger onClick when disabled", () => {
+    const onClick = jest.fn();
+    render(
+      <Button onClick={onClick} disabled>
+        Click Me
+      </Button>
+    );
+
+    const button = screen.getByText("Click Me");
+    fireEvent.click(button);
+
+    expect(onClick).not.toHaveBeenCalled();
   });
 
   it("matches snapshot", () => {
