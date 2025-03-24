@@ -24,3 +24,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background);
 }
+
+button {
+  box-shadow: none !important;
+}

@@ -9,6 +9,8 @@ const defaultTheme: ThemeConfig = {
     Button: {
       colorPrimary: "var(--accent)",
       colorPrimaryHover: "var(--accent)",
+      colorPrimaryActive: "var(--accent)",
+      colorPrimaryText: "var(--black)",
     },
   },
 };

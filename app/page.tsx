@@ -1,10 +1,10 @@
-import { Button } from "antd";
+import StyledButton from "@/components/Button";
 
 const Home = () => {
   return (
     <div>
       <h1>Hello world!</h1>
-      <Button type="primary">Submit</Button>
+      <StyledButton variant="primary">Submit</StyledButton>
     </div>
   );
 };
